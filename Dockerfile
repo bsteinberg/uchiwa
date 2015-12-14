@@ -65,7 +65,9 @@ RUN /usr/local/go/bin/go get github.com/sensu/uchiwa && cd $GOPATH/src/github.co
 WORKDIR $GOPATH/src/github.com/sensu/uchiwa
 COPY config/package.json package.json
 COPY config/bower.json bower.json
-COPY config/config.json config.json
+
+RUN mkdir /config
+COPY config/config.json /config/config.json
 
 RUN npm install --production --unsafe-perm
 
