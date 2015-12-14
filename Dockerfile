@@ -74,10 +74,11 @@ RUN npm install --production --unsafe-perm
 
 ##  
 ## -----------------------------------------------------------------------------
-COPY src/uchiwa-web/css $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
-COPY src/uchiwa-web/fonts $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
-COPY src/uchiwa-web/img $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
-COPY src/uchiwa-web/js $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
+RUN mkdir -p $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web
+COPY src/uchiwa-web/css $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/css
+COPY src/uchiwa-web/fonts $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/fonts
+COPY src/uchiwa-web/img $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/img
+COPY src/uchiwa-web/js $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/js
 
 ## GO Path configuraiton 
 ## -----------------------------------------------------------------------------
