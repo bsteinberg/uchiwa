@@ -71,6 +71,14 @@ COPY config/config.json /config/config.json
 
 RUN npm install --production --unsafe-perm
 
+
+##  
+## -----------------------------------------------------------------------------
+COPY src/uchiwa-web/css $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
+COPY src/uchiwa-web/fonts $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
+COPY src/uchiwa-web/img $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
+COPY src/uchiwa-web/js $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/
+
 ## GO Path configuraiton 
 ## -----------------------------------------------------------------------------
 ENV PATH $PATH:/usr/local/go/bin
