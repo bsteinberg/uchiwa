@@ -79,6 +79,7 @@ COPY src/uchiwa-web/css $GOPATH/src/github.com/sensu/uchiwa/public/bower_compone
 COPY src/uchiwa-web/fonts $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/fonts
 COPY src/uchiwa-web/img $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/img
 COPY src/uchiwa-web/js $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/js
+COPY src/uchiwa-web/partials $GOPATH/src/github.com/sensu/uchiwa/public/bower_components/uchiwa-web/partials
 
 ## GO Path configuraiton 
 ## -----------------------------------------------------------------------------
